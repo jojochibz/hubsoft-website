@@ -1,0 +1,1269 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>HubSoft Engineering Solutions — Electrical • Solar • Borehole • Plumbing</title>
+<meta name="description" content="Dependable electrical, solar, borehole and plumbing engineering services for homes, farms, businesses, industrial facilities and mining operations across Zimbabwe." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0b2545;
+    --navy-2:#13315c;
+    --blue:#1d4e89;
+    --blue-soft:#e6efff;
+    --gold:#f5a623;
+    --gold-2:#ffb733;
+    --ink:#0e1b33;
+    --muted:#5b6b85;
+    --line:#e3e9f3;
+    --bg:#f4f7fb;
+    --white:#ffffff;
+    --green:#25d366;
+    --shadow:0 10px 30px rgba(11,37,69,.10);
+    --shadow-lg:0 25px 60px rgba(11,37,69,.18);
+    --radius:18px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .container{max-width:1200px;margin:0 auto;padding:0 22px}
+  h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;color:var(--navy);margin:0 0 .5em;line-height:1.15;letter-spacing:-.01em}
+  h1{font-size:clamp(34px,5vw,58px);font-weight:800}
+  h2{font-size:clamp(26px,3.4vw,42px);font-weight:800}
+  h3{font-size:20px;font-weight:700}
+  p{margin:0 0 1em;color:#374a6b}
+  .eyebrow{display:inline-block;font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--gold);background:rgba(245,166,35,.12);padding:8px 14px;border-radius:999px}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:12px;font-weight:700;font-size:15px;transition:transform .15s ease, box-shadow .15s ease;cursor:pointer;border:none}
+  .btn-primary{background:var(--gold);color:#1d1100;box-shadow:0 10px 24px rgba(245,166,35,.35)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(245,166,35,.45)}
+  .btn-ghost{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.45)}
+  .btn-ghost:hover{background:rgba(255,255,255,.12)}
+  .btn-dark{background:var(--navy);color:#fff}
+  .btn-dark:hover{background:var(--navy-2)}
+  .btn-wa{background:var(--green);color:#fff;box-shadow:0 10px 24px rgba(37,211,102,.35)}
+
+  /* ============ NAV ============ */
+  header.nav{
+    position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:saturate(150%) blur(10px);
+    border-bottom:1px solid var(--line)
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+  .logo{display:flex;align-items:center;gap:12px;font-weight:800;color:var(--navy)}
+  .logo-mark{
+    width:42px;height:42px;border-radius:11px;background:linear-gradient(135deg,var(--navy),var(--blue));
+    display:grid;place-items:center;color:var(--gold);box-shadow:var(--shadow)
+  }
+  .logo-name{display:flex;flex-direction:column;line-height:1}
+  .logo-name b{font-size:17px;letter-spacing:.2px}
+  .logo-name span{font-size:10.5px;font-weight:600;color:var(--muted);letter-spacing:.18em;text-transform:uppercase;margin-top:4px}
+  nav ul{list-style:none;margin:0;padding:0;display:flex;gap:28px}
+  nav a{font-weight:600;font-size:14.5px;color:#23314f;position:relative}
+  nav a:hover{color:var(--blue)}
+  nav a::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;background:var(--gold);transform:scaleX(0);transition:transform .2s}
+  nav a:hover::after{transform:scaleX(1)}
+  .nav-cta{display:flex;align-items:center;gap:10px}
+  .nav-phone{font-weight:700;color:var(--navy);font-size:14px}
+  @media (max-width:880px){nav ul,.nav-phone{display:none}}
+
+  /* ============ HERO ============ */
+  .hero{
+    position:relative;overflow:hidden;color:#fff;
+    background:
+      radial-gradient(1100px 600px at 85% -10%, rgba(245,166,35,.22), transparent 60%),
+      radial-gradient(900px 500px at -10% 90%, rgba(29,78,137,.55), transparent 60%),
+      linear-gradient(135deg,#08203f 0%, #0b2545 45%, #13315c 100%);
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;
+    background-image:
+      linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+    background-size:42px 42px;
+    mask-image: radial-gradient(ellipse at 50% 30%, #000 30%, transparent 75%);
+    pointer-events:none;
+  }
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center;padding:90px 0 110px;position:relative}
+  @media (max-width:980px){.hero-grid{grid-template-columns:1fr;gap:50px;padding:70px 0 80px}}
+  .hero h1{color:#fff}
+  .hero h1 .accent{
+    background:linear-gradient(90deg,var(--gold) 0%, #ffd277 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent
+  }
+  .hero p.lead{color:#cfd9ec;font-size:18px;max-width:560px}
+  .hero-tag{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);padding:8px 14px;border-radius:999px;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:#e8eefc;font-weight:600;margin-bottom:22px}
+  .hero-tag .dot{width:8px;height:8px;background:var(--gold);border-radius:50%;box-shadow:0 0 0 4px rgba(245,166,35,.22)}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+  .hero-meta{display:flex;gap:34px;margin-top:38px;flex-wrap:wrap}
+  .hero-meta div{display:flex;flex-direction:column}
+  .hero-meta b{font-family:'Playfair Display',serif;font-size:28px;color:#fff}
+  .hero-meta span{color:#9eb1d2;font-size:12px;text-transform:uppercase;letter-spacing:.16em;margin-top:4px}
+
+  /* Hero visual — SVG electrical illustration */
+  .hero-art{
+    position:relative;border-radius:24px;padding:22px;
+    background:linear-gradient(160deg, rgba(255,255,255,.10), rgba(255,255,255,.02));
+    border:1px solid rgba(255,255,255,.14);
+    box-shadow:var(--shadow-lg)
+  }
+  .hero-art .frame{
+    border-radius:18px;overflow:hidden;background:
+      radial-gradient(700px 400px at 80% 0%, rgba(245,166,35,.22), transparent 60%),
+      linear-gradient(160deg,#0c2a55,#0b2545);
+    aspect-ratio:5/4;display:grid;place-items:center;position:relative
+  }
+  .floating-badge{
+    position:absolute;background:#fff;color:var(--navy);border-radius:14px;padding:12px 14px;
+    display:flex;align-items:center;gap:10px;box-shadow:var(--shadow-lg);font-weight:700;font-size:13.5px
+  }
+  .floating-badge .ic{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;color:#fff}
+  .fb-1{top:-18px;left:-18px}
+  .fb-2{bottom:-18px;right:-18px}
+
+  /* ============ MARQUEE / SECTORS BAND ============ */
+  .band{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .band-inner{display:flex;align-items:center;justify-content:space-between;padding:22px 0;gap:24px;flex-wrap:wrap}
+  .band-label{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);font-weight:700}
+  .band-items{display:flex;gap:38px;flex-wrap:wrap;align-items:center}
+  .band-items div{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--navy)}
+  .band-items svg{flex:0 0 22px}
+
+  /* ============ SERVICES ============ */
+  section{padding:90px 0}
+  .section-head{text-align:center;max-width:760px;margin:0 auto 60px}
+  .section-head p{color:var(--muted);font-size:17px}
+  .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+  @media (max-width:1000px){.grid-4{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:560px){.grid-4{grid-template-columns:1fr}}
+  .svc{
+    background:#fff;border-radius:var(--radius);padding:30px 26px;border:1px solid var(--line);
+    transition:transform .25s ease, box-shadow .25s ease, border-color .25s;position:relative;overflow:hidden
+  }
+  .svc::before{
+    content:"";position:absolute;left:0;top:0;height:5px;width:100%;background:linear-gradient(90deg,var(--blue),var(--gold));
+    transform:scaleX(0);transform-origin:left;transition:transform .35s ease
+  }
+  .svc:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:transparent}
+  .svc:hover::before{transform:scaleX(1)}
+  .svc .ic{
+    width:62px;height:62px;border-radius:14px;display:grid;place-items:center;margin-bottom:18px;
+    background:linear-gradient(135deg,var(--blue),var(--navy));color:var(--gold);box-shadow:0 10px 24px rgba(11,37,69,.18)
+  }
+  .svc h3{color:var(--navy)}
+  .svc ul{margin:14px 0 18px;padding:0;list-style:none}
+  .svc li{position:relative;padding-left:22px;color:#43567a;font-size:14.5px;margin-bottom:8px}
+  .svc li::before{content:"";position:absolute;left:0;top:9px;width:10px;height:10px;border-radius:3px;background:var(--gold)}
+  .svc .more{font-weight:700;color:var(--blue);font-size:14px;display:inline-flex;align-items:center;gap:6px}
+  .svc .more::after{content:"→";transition:transform .2s}
+  .svc:hover .more::after{transform:translateX(4px)}
+
+  /* ============ ABOUT / WHY ============ */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+  @media (max-width:900px){.about-grid{grid-template-columns:1fr}}
+  .about-img-wrap{position:relative}
+  .about-img{
+    border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg);
+    background:linear-gradient(135deg,#0b2545,#13315c);aspect-ratio:4/5;
+    position:relative;
+  }
+  .about-img > img{width:100%;height:100%;object-fit:cover;display:block}
+  .about-img-2{
+    position:absolute;right:-24px;bottom:-24px;width:55%;aspect-ratio:1/1;border-radius:16px;
+    overflow:hidden;background:linear-gradient(135deg,#f5a623,#ffb733);
+    border:8px solid #fff;box-shadow:var(--shadow-lg)
+  }
+  .about-img-2 > img{width:100%;height:100%;object-fit:cover;display:block}
+  .about-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:30px}
+  .stat{
+    background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px;
+    display:flex;align-items:center;gap:14px
+  }
+  .stat b{font-family:'Playfair Display',serif;font-size:30px;color:var(--navy);line-height:1}
+  .stat span{color:var(--muted);font-size:13px;display:block;margin-top:4px;font-weight:600}
+  .check-list{list-style:none;padding:0;margin:18px 0 0}
+  .check-list li{display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;font-weight:600;color:#2a3a5b}
+  .check-list .ck{
+    flex:0 0 26px;width:26px;height:26px;border-radius:50%;background:rgba(29,78,137,.12);color:var(--blue);
+    display:grid;place-items:center;margin-top:1px
+  }
+
+  /* ============ PROCESS ============ */
+  .process{background:linear-gradient(180deg,#fff, #eef3fb)}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;position:relative}
+  @media (max-width:900px){.steps{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:520px){.steps{grid-template-columns:1fr}}
+  .step{
+    background:#fff;border-radius:var(--radius);padding:30px 24px;position:relative;border:1px solid var(--line);
+    transition:transform .2s
+  }
+  .step:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .step .num{
+    font-family:'Playfair Display',serif;font-size:46px;color:transparent;
+    -webkit-text-stroke:1.5px var(--gold);line-height:1;margin-bottom:10px
+  }
+  .step .ic{width:46px;height:46px;border-radius:10px;background:var(--blue-soft);color:var(--blue);display:grid;place-items:center;margin-bottom:14px}
+  .step h3{margin-bottom:6px}
+  .step p{font-size:14.5px;margin:0;color:#5b6b85}
+
+  /* ============ SOLUTIONS GRID (Featured) ============ */
+  .solutions{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+  .solutions::after{
+    content:"";position:absolute;inset:0;background-image:
+      radial-gradient(600px 300px at 100% 0%, rgba(245,166,35,.18), transparent 60%),
+      radial-gradient(500px 280px at 0% 100%, rgba(29,78,137,.45), transparent 60%);
+    pointer-events:none
+  }
+  .solutions h2,.solutions .section-head p{color:#fff}
+  .solutions .section-head p{color:#b8c6e0}
+  .sol-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;position:relative;z-index:1}
+  @media (max-width:900px){.sol-grid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:560px){.sol-grid{grid-template-columns:1fr}}
+  .sol{
+    background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);
+    padding:26px;backdrop-filter:blur(6px);transition:.25s
+  }
+  .sol:hover{background:rgba(255,255,255,.1);transform:translateY(-4px)}
+  .sol .tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+  .sol h3{color:#fff;margin-bottom:8px}
+  .sol p{color:#c6d2ea;font-size:14.5px;margin:0}
+
+  /* ============ SECTORS ============ */
+  .sectors-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  @media (max-width:900px){.sectors-grid{grid-template-columns:repeat(2,1fr)}}
+  .sector{
+    border-radius:var(--radius);padding:30px 24px;color:#fff;position:relative;overflow:hidden;
+    min-height:220px;display:flex;flex-direction:column;justify-content:flex-end;
+    background:linear-gradient(180deg, rgba(11,37,69,.1), rgba(11,37,69,.85)),
+      linear-gradient(135deg,#1d4e89,#0b2545);
+  }
+  .sector h3{color:#fff;margin:0 0 4px}
+  .sector p{margin:0;color:#d8e2f6;font-size:14px}
+  .sector .ic{position:absolute;top:18px;right:18px;width:46px;height:46px;border-radius:12px;display:grid;place-items:center;background:rgba(255,255,255,.12);color:var(--gold)}
+  .sector{position:relative;overflow:hidden;background:linear-gradient(135deg,#1d4e89,#0b2545)}
+  .sector > img.sector-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+  .sector::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(11,37,69,.15), rgba(11,37,69,.9));z-index:1;pointer-events:none}
+  .sector > *:not(img.sector-bg){position:relative;z-index:2}
+
+  /* ============ GALLERY ============ */
+  .gallery{background:#fff}
+  .gal-grid{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:180px;gap:14px}
+  @media (max-width:900px){.gal-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px}}
+  .gal{border-radius:14px;overflow:hidden;position:relative;background:linear-gradient(135deg,#1d4e89,#0b2545)}
+  .gal > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .8s ease-in-out;z-index:0}
+  .gal > img.active{opacity:1}
+
+  /* ============ TESTIMONIALS ============ */
+  .quotes{background:#eef3fb}
+  .quotes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  @media (max-width:900px){.quotes-grid{grid-template-columns:1fr}}
+  .quote{background:#fff;border-radius:var(--radius);padding:30px;box-shadow:var(--shadow);position:relative}
+  .quote::before{content:"“";position:absolute;left:18px;top:-12px;font-family:'Playfair Display',serif;color:var(--gold);font-size:80px;line-height:1}
+  .quote p{font-style:italic;color:#324562;margin-top:10px}
+  .quote .who{display:flex;align-items:center;gap:12px;margin-top:18px}
+  .quote .av{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--gold));display:grid;place-items:center;color:#fff;font-weight:800}
+  .quote .who b{display:block;color:var(--navy);font-size:15px}
+  .quote .who span{font-size:12.5px;color:var(--muted)}
+
+  /* ============ CTA ============ */
+  .cta{
+    background:linear-gradient(135deg,#0b2545,#13315c);color:#fff;border-radius:24px;padding:60px;
+    display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:center;box-shadow:var(--shadow-lg);position:relative;overflow:hidden
+  }
+  .cta::after{
+    content:"";position:absolute;right:-80px;top:-80px;width:300px;height:300px;border-radius:50%;
+    background:radial-gradient(circle, rgba(245,166,35,.35), transparent 70%)
+  }
+  .cta h2{color:#fff}
+  .cta p{color:#c6d2ea}
+  .cta .actions{display:flex;flex-direction:column;gap:14px;position:relative;z-index:1}
+  .cta .actions .btn{justify-content:center;font-size:16px;padding:18px 22px}
+  @media (max-width:820px){.cta{grid-template-columns:1fr;padding:40px 28px}}
+
+  /* ============ CONTACT ============ */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+  @media (max-width:900px){.contact-grid{grid-template-columns:1fr}}
+  .contact-card{
+    background:#fff;border-radius:var(--radius);padding:34px;border:1px solid var(--line);box-shadow:var(--shadow)
+  }
+  .contact-row{display:flex;gap:14px;padding:16px 0;border-bottom:1px dashed var(--line);align-items:flex-start}
+  .contact-row:last-child{border-bottom:none}
+  .contact-row .ic{flex:0 0 44px;width:44px;height:44px;border-radius:12px;background:var(--blue-soft);color:var(--blue);display:grid;place-items:center}
+  .contact-row b{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.16em;color:var(--muted);font-weight:700}
+  .contact-row span{display:block;color:var(--navy);font-weight:700;font-size:16px;margin-top:4px}
+  form{display:grid;gap:14px}
+  .field{display:flex;flex-direction:column;gap:6px}
+  .field label{font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--muted)}
+  .field input,.field select,.field textarea{
+    border:1.5px solid var(--line);background:#f7faff;padding:14px 16px;border-radius:12px;font-size:15px;font-family:inherit;color:var(--ink);transition:.15s
+  }
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--blue);background:#fff;box-shadow:0 0 0 4px rgba(29,78,137,.12)}
+  .field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media (max-width:560px){.field-row{grid-template-columns:1fr}}
+
+  /* ============ FOOTER ============ */
+  footer{background:#08203f;color:#b8c6e0;padding:70px 0 30px;margin-top:30px}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+  @media (max-width:900px){.foot-grid{grid-template-columns:1fr 1fr;gap:30px}}
+  @media (max-width:560px){.foot-grid{grid-template-columns:1fr}}
+  footer h4{color:#fff;font-family:'Inter',sans-serif;font-weight:700;font-size:14px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:18px}
+  footer a{display:block;padding:6px 0;font-size:14px;color:#a5b6d6}
+  footer a:hover{color:var(--gold)}
+  .foot-bottom{margin-top:50px;padding-top:24px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;font-size:13px;color:#85a}
+  .foot-bottom span{color:#7e92b9}
+  .socials{display:flex;gap:10px;margin-top:14px}
+  .socials a{width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,.06);display:grid;place-items:center;padding:0}
+  .socials a:hover{background:var(--gold);color:#08203f}
+
+  /* Floating WhatsApp */
+  .float-wa{
+    position:fixed;right:22px;bottom:22px;background:var(--green);color:#fff;width:60px;height:60px;border-radius:50%;
+    display:grid;place-items:center;box-shadow:0 15px 35px rgba(37,211,102,.4);z-index:60;transition:.2s
+  }
+  .float-wa:hover{transform:scale(1.08)}
+</style>
+</head>
+<body>
+
+<!-- ===================== NAV ===================== -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="#" class="logo">
+      <div class="logo-mark">
+        <!-- bolt -->
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg>
+      </div>
+      <div class="logo-name">
+        <b>HubSoft</b>
+        <span>Engineering Solutions</span>
+      </div>
+    </a>
+
+    <!-- NEW: Mobile Hamburger Menu Toggle Button Button -->
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+    </button>
+
+    <!-- Navigation container added with unique ID -->
+    <nav id="navMenu">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#sectors">Sectors</a></li>
+        <li><a href="#gallery">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      
+      <!-- Inside the mobile drawer menu, we move the CTA details down -->
+      <div class="mobile-cta-wrapper">
+        <span class="nav-phone">+263 713 472 072</span>
+        <a class="btn btn-primary" href="#contact">Request a Quote</a>
+      </div>
+    </nav>
+
+    <!-- Desktop CTA bar handles default sizing changes -->
+    <div class="nav-cta" id="desktopCta">
+      <span class="nav-phone">+263 713 472 072</span>
+      <a class="btn btn-primary" href="#contact">Request a Quote</a>
+    </div>
+  </div>
+</header>
+
+<!-- Add this clean CSS into your existing <style> tag or style file -->
+<style>
+/* --- Default State for Desktop Layouts --- */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 2001;
+}
+
+.hamburger-bar {
+  width: 100%;
+  height: 2px;
+  background-color: #1f2937; /* Clean charcoal dark bar color */
+  transition: all 0.3s ease;
+}
+
+.mobile-cta-wrapper {
+  display: none; /* Keep hidden on computer monitors */
+}
+
+/* --- Responsive Media Viewport (Triggered below 880px) --- */
+@media (max-width: 880px) {
+  .menu-toggle {
+    display: flex; /* Displays icon natively on smartphone variants */
+  }
+
+  #desktopCta {
+    display: none; /* Wipe out conflicting layout rows */
+  }
+
+  /* Morph standard flat list container down into responsive drawer deck */
+  header.nav nav#navMenu {
+    display: none; 
+    flex-direction: column;
+    position: absolute;
+    top: 100%; /* Drops neatly inline right beneath your header block boundaries */
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    padding: 32px 24px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    z-index: 2000;
+  }
+
+  header.nav nav#navMenu ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+    padding: 0;
+    margin: 0 0 24px 0;
+  }
+
+  header.nav nav#navMenu ul li {
+    width: 100%;
+  }
+
+  header.nav nav#navMenu ul li a {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    width: 100%;
+    padding: 4px 0;
+  }
+
+  /* Reveal internal responsive CTA blocks */
+  .mobile-cta-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-top: 1px solid #f3f4f6;
+    padding-top: 24px;
+    width: 100%;
+  }
+
+  .mobile-cta-wrapper .nav-phone {
+    font-weight: 600;
+    color: #4b5563;
+  }
+
+  .mobile-cta-wrapper .btn {
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  /* JavaScript Toggle Switch Triggers layout activation rules */
+  header.nav nav#navMenu.mobile-active {
+    display: flex !important;
+  }
+
+  /* Handle animated CSS transformation parameters across hamburger spans */
+  .menu-toggle.open .hamburger-bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .menu-toggle.open .hamburger-bar:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle.open .hamburger-bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+</style>
+
+<!-- Add this core interactive execution engine script layout right above your </body> tag -->
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const navMenu = document.getElementById('navMenu');
+
+  menuToggle.addEventListener('click', () => {
+    // Reveal or obscure navigation lists
+    navMenu.classList.toggle('mobile-active');
+    // Animate individual spans cleanly into matching cross (X) states
+    menuToggle.classList.toggle('open');
+  });
+
+  // Safe wrapper loops automatically pull drawers shut whenever anchor tags fire off clicks
+  document.querySelectorAll('#navMenu ul li a, .mobile-cta-wrapper .btn').forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('mobile-active');
+      menuToggle.classList.remove('open');
+    });
+  });
+</script>
+
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="hero-tag"><span class="dot"></span> Field-ready utility solutions • Zimbabwe</span>
+      <h1>Powering productivity with <span class="accent">dependable engineering</span> across Zimbabwe.</h1>
+      <p class="lead">Electrical, solar, borehole and plumbing services for homes, farms, businesses, industrial facilities and mining operations — delivered with practical workmanship and responsive support.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#contact">Book a Site Assessment</a>
+        <a class="btn btn-ghost" href="#services">Explore Services →</a>
+      </div>
+      <div class="hero-meta">
+        <div><b>4</b><span>Core service lines</span></div>
+        <div><b>500+</b><span>Sites supported</span></div>
+        <div><b>24/7</b><span>Response support</span></div>
+        <div><b>100%</b><span>Site-ready teams</span></div>
+      </div>
+    </div>
+
+    <div class="hero-art">
+      <div class="frame">
+        <!-- Big SVG: stylised pylon + solar panel + power lines -->
+        <svg viewBox="0 0 500 400" width="100%" style="display:block">
+          <defs>
+            <linearGradient id="gSky" x1="0" x2="0" y1="0" y2="1">
+              <stop offset="0" stop-color="#0b2545"/>
+              <stop offset="1" stop-color="#13315c"/>
+            </linearGradient>
+            <linearGradient id="gSun" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0" stop-color="#ffd277"/>
+              <stop offset="1" stop-color="#f5a623"/>
+            </linearGradient>
+            <linearGradient id="gPanel" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0" stop-color="#3a6db5"/>
+              <stop offset="1" stop-color="#1d4e89"/>
+            </linearGradient>
+          </defs>
+
+          <!-- Sun -->
+          <circle cx="380" cy="90" r="48" fill="url(#gSun)" opacity=".85"/>
+          <circle cx="380" cy="90" r="70" fill="none" stroke="#f5a623" stroke-opacity=".25" stroke-width="1"/>
+          <circle cx="380" cy="90" r="95" fill="none" stroke="#f5a623" stroke-opacity=".15" stroke-width="1"/>
+
+          <!-- Mountains/ground silhouette -->
+          <path d="M0 320 L80 270 L150 300 L230 250 L310 290 L390 240 L500 280 L500 400 L0 400 Z" fill="#091d3d"/>
+          <path d="M0 345 L500 345 L500 400 L0 400 Z" fill="#061730"/>
+
+          <!-- Pylon (transmission tower) -->
+          <g stroke="#cfd9ec" stroke-width="2" fill="none" stroke-linecap="round">
+            <path d="M120 320 L150 110 L180 320"/>
+            <path d="M120 320 L180 320"/>
+            <path d="M132 240 L168 240"/>
+            <path d="M138 200 L162 200"/>
+            <path d="M142 170 L158 170"/>
+            <!-- cross arms -->
+            <path d="M100 195 L200 195"/>
+            <path d="M108 165 L192 165"/>
+            <path d="M118 135 L182 135"/>
+            <!-- insulators -->
+            <circle cx="100" cy="195" r="3" fill="#f5a623"/>
+            <circle cx="200" cy="195" r="3" fill="#f5a623"/>
+            <circle cx="108" cy="165" r="3" fill="#f5a623"/>
+            <circle cx="192" cy="165" r="3" fill="#f5a623"/>
+            <circle cx="118" cy="135" r="3" fill="#f5a623"/>
+            <circle cx="182" cy="135" r="3" fill="#f5a623"/>
+            <!-- bracing -->
+            <path d="M135 250 L165 220 M165 250 L135 220"/>
+            <path d="M140 215 L160 185 M160 215 L140 185"/>
+          </g>
+
+          <!-- Power lines -->
+          <g stroke="#7892bf" stroke-width="1.4" fill="none">
+            <path d="M100 195 Q260 230 420 195"/>
+            <path d="M108 165 Q260 205 420 165"/>
+            <path d="M118 135 Q260 180 420 135"/>
+          </g>
+
+          <!-- Solar panel rig on the right -->
+          <g transform="translate(330,210) rotate(-18)">
+            <rect x="0" y="0" width="140" height="80" rx="4" fill="url(#gPanel)" stroke="#0a1f3f" stroke-width="2"/>
+            <g stroke="#0a1f3f" stroke-width="1" opacity=".55">
+              <line x1="35" y1="0" x2="35" y2="80"/>
+              <line x1="70" y1="0" x2="70" y2="80"/>
+              <line x1="105" y1="0" x2="105" y2="80"/>
+              <line x1="0" y1="40" x2="140" y2="40"/>
+            </g>
+            <!-- shine -->
+            <path d="M5 5 L60 5 L20 75 L5 75 Z" fill="#fff" opacity=".07"/>
+          </g>
+          <line x1="395" y1="290" x2="395" y2="345" stroke="#cfd9ec" stroke-width="2"/>
+
+          <!-- Lightning bolt accent -->
+          <path d="M260 60 L240 130 L268 130 L250 200 L300 110 L268 110 L290 60 Z"
+                fill="#f5a623" opacity=".92" stroke="#fff" stroke-width="1.2"/>
+
+          <!-- circuit nodes -->
+          <g fill="#f5a623">
+            <circle cx="60" cy="70" r="3"/>
+            <circle cx="450" cy="180" r="3"/>
+            <circle cx="50" cy="260" r="3"/>
+          </g>
+          <g stroke="#f5a623" stroke-opacity=".4" stroke-dasharray="3 4" fill="none">
+            <path d="M60 70 L260 60"/>
+            <path d="M450 180 L300 110"/>
+            <path d="M50 260 L120 320"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="floating-badge fb-1">
+        <div class="ic" style="background:linear-gradient(135deg,#1d4e89,#0b2545)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg>
+        </div>
+        <div>Certified electricians<br><span style="font-weight:500;color:#5b6b85;font-size:11.5px">Safety-first workmanship</span></div>
+      </div>
+      <div class="floating-badge fb-2">
+        <div class="ic" style="background:linear-gradient(135deg,#f5a623,#ffb733)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M12 2 4 6v6c0 5 3.5 9.7 8 10 4.5-.3 8-5 8-10V6l-8-4z"/></svg>
+        </div>
+        <div>2+ years experience<br><span style="font-weight:500;color:#5b6b85;font-size:11.5px">Across 4 industries</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SECTOR BAND ===================== -->
+<div class="band">
+  <div class="container band-inner">
+    <span class="band-label">Trusted Across Sectors</span>
+    <div class="band-items">
+      <div>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1d4e89" stroke-width="2"><path d="M3 11 12 3l9 8M5 10v10h14V10"/></svg>
+        Residential
+      </div>
+      <div>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1d4e89" stroke-width="2"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 12h2M13 12h2M9 16h2M13 16h2"/></svg>
+        Commercial
+      </div>
+      <div>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1d4e89" stroke-width="2"><path d="M3 21V10l5 3V8l5 3V8l5 3v10H3z"/></svg>
+        Industrial
+      </div>
+      <div>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1d4e89" stroke-width="2"><path d="M4 20l4-8h8l4 8M6 12l3-7h6l3 7"/></svg>
+        Mining
+      </div>
+      <div>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1d4e89" stroke-width="2"><path d="M3 18s2-6 9-6 9 6 9 6M12 2v4M5 6l2 3M19 6l-2 3"/></svg>
+        Farms
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== SERVICES ===================== -->
+<section id="services">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Core Service Areas</span>
+      <h2>Four trades. One dependable provider.</h2>
+      <p>Reliable technical support where it matters most — from installations and upgrades to fault-finding and ongoing maintenance.</p>
+    </div>
+
+    <div class="grid-4">
+      <!-- ELECTRICAL -->
+      <div class="svc">
+        <div class="ic">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg>
+        </div>
+        <h3>Electrical Services</h3>
+        <ul>
+          <li>Domestic, commercial & industrial wiring</li>
+          <li>3-phase & single-phase motor installations</li>
+          <li>Control panels & switchboard wiring</li>
+          <li>Fault finding, repairs & upgrades</li>
+        </ul>
+        <a class="more" href="#contact">Get a quote</a>
+      </div>
+
+      <!-- SOLAR -->
+      <div class="svc">
+        <div class="ic">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4" fill="currentColor"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/></svg>
+        </div>
+        <h3>Solar & Backup Power</h3>
+        <ul>
+          <li>Solar system design & installation</li>
+          <li>Inverter, battery & backup solutions</li>
+          <li>Off-grid, hybrid & resilience setups</li>
+          <li>Servicing, upgrades & fault diagnosis</li>
+        </ul>
+        <a class="more" href="#contact">Get a quote</a>
+      </div>
+
+      <!-- BOREHOLE -->
+      <div class="svc">
+        <div class="ic">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8 9 6 13 6 16a6 6 0 0012 0c0-3-2-7-6-14z"/></svg>
+        </div>
+        <h3>Borehole Systems</h3>
+        <ul>
+          <li>Borehole pump installation & commissioning</li>
+          <li>Water reticulation & pressure systems</li>
+          <li>Pump control, protection & troubleshooting</li>
+          <li>Farm, home & business water delivery</li>
+        </ul>
+        <a class="more" href="#contact">Get a quote</a>
+      </div>
+
+      <!-- PLUMBING -->
+      <div class="svc">
+        <div class="ic">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 3v6h4v4H7v8M17 21v-6h-4v-4h4V3"/></svg>
+        </div>
+        <h3>Plumbing Services</h3>
+        <ul>
+          <li>Plumbing installations, repairs & maintenance</li>
+          <li>Leak detection & pipework repairs</li>
+          <li>Fittings replacement & water line support</li>
+          <li>Integrated plumbing for utility projects</li>
+        </ul>
+        <a class="more" href="#contact">Get a quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ABOUT / WHY ===================== -->
+<section id="about" style="background:#fff">
+  <div class="container about-grid">
+      <div class="about-img">
+        <img src="" alt="">
+      </div>
+
+    <div>
+      <span class="eyebrow">Why HubSoft</span>
+      <h2>Practical engineering tailored to real site conditions.</h2>
+      <p>HubSoft Engineering Solutions is a Zimbabwean multi-trade provider trusted by homeowners, farmers, businesses and industrial operators. We unify electrical, solar, borehole and plumbing capability under one dependable team — so you spend less time coordinating contractors and more time running your operation.</p>
+
+      <ul class="check-list">
+        <li><span class="ck"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> One dependable provider across key site services</li>
+        <li><span class="ck"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Practical workmanship aligned to real site conditions</li>
+        <li><span class="ck"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Clear quotations and responsive support</li>
+        <li><span class="ck"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Safety-first, tender-ready engineering teams</li>
+      </ul>
+
+      <div class="about-stats">
+        <div class="stat">
+          <div style="width:46px;height:46px;border-radius:12px;background:rgba(245,166,35,.18);color:var(--gold);display:grid;place-items:center;flex:0 0 46px">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg>
+          </div>
+          <div><b>2+ yrs</b><span>Field experience</span></div>
+        </div>
+        <div class="stat">
+          <div style="width:46px;height:46px;border-radius:12px;background:rgba(29,78,137,.12);color:var(--blue);display:grid;place-items:center;flex:0 0 46px">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+          </div>
+          <div><b>24/7</b><span>Call-out support</span></div>
+        </div>
+        <div class="stat">
+          <div style="width:46px;height:46px;border-radius:12px;background:rgba(37,211,102,.15);color:var(--green);display:grid;place-items:center;flex:0 0 46px">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L4 6v6c0 5 3.5 9.7 8 10 4.5-.3 8-5 8-10V6l-8-4z"/><polyline points="9 12 11 14 15 10"/></svg>
+          </div>
+          <div><b>Certified</b><span>Safety-first teams</span></div>
+        </div>
+        <div class="stat">
+          <div style="width:46px;height:46px;border-radius:12px;background:rgba(29,78,137,.12);color:var(--blue);display:grid;place-items:center;flex:0 0 46px">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+          </div>
+          <div><b>4 trades</b><span>One provider</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROCESS ===================== -->
+<section id="process" class="process">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">How We Work</span>
+      <h2>A simple, professional path from enquiry to handover.</h2>
+      <p>A consistent, transparent process that keeps your project on time, on budget and aligned to site realities.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <div class="num">01</div>
+        <div class="ic">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg>
+        </div>
+        <h3>Assess the site</h3>
+        <p>We visit, inspect and understand your conditions, loads and goals before quoting.</p>
+      </div>
+      <div class="step">
+        <div class="num">02</div>
+        <div class="ic">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v12H4z"/><path d="M8 20h8"/></svg>
+        </div>
+        <h3>Recommend a solution</h3>
+        <p>Practical, budget-aligned proposals with clear scope, materials and timelines.</p>
+      </div>
+      <div class="step">
+        <div class="num">03</div>
+        <div class="ic">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 7l-2 2 6 6 2-2-6-6zM3 21l7-3 6-6-3-3-6 6-3 7z"/></svg>
+        </div>
+        <h3>Install or repair</h3>
+        <p>Skilled technicians deliver efficient, safety-first execution on site.</p>
+      </div>
+      <div class="step">
+        <div class="num">04</div>
+        <div class="ic">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v6M12 22v-6M2 12h6M22 12h-6"/><circle cx="12" cy="12" r="4"/></svg>
+        </div>
+        <h3>Follow-up maintenance</h3>
+        <p>Ongoing support that extends service life, prevents downtime and protects uptime.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FEATURED SOLUTIONS ===================== -->
+<section class="solutions">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Featured Solutions</span>
+      <h2>Solutions clients ask for most.</h2>
+      <p>From single-house upgrades to full industrial backup — here are the most-requested HubSoft solutions.</p>
+    </div>
+
+    <div class="sol-grid">
+      <div class="sol">
+        <span class="tag">Residential</span>
+        <h3>Wiring & DB upgrades</h3>
+        <p>Safe wiring upgrades, new points, distribution boards and practical domestic support.</p>
+      </div>
+      <div class="sol">
+        <span class="tag">Solar</span>
+        <h3>Solar backup systems</h3>
+        <p>Backup systems that reduce downtime and improve resilience for homes and small businesses.</p>
+      </div>
+      <div class="sol">
+        <span class="tag">Water</span>
+        <h3>Borehole pump systems</h3>
+        <p>Pump installation, water delivery setup and pressure support for farms and properties.</p>
+      </div>
+      <div class="sol">
+        <span class="tag">Industrial</span>
+        <h3>Motor installations</h3>
+        <p>Single-phase and 3-phase motor installation for workshops, utility systems and plant support.</p>
+      </div>
+      <div class="sol">
+        <span class="tag">Maintenance</span>
+        <h3>Troubleshooting & repairs</h3>
+        <p>Rapid diagnosis of faults affecting power, pumping, control and site productivity.</p>
+      </div>
+      <div class="sol">
+        <span class="tag">Preventive</span>
+        <h3>Routine maintenance</h3>
+        <p>Inspections, repairs and corrective support that extend service life and reliability.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SECTORS ===================== -->
+<section id="sectors">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Sectors Served</span>
+      <h2>Built for the realities of every site.</h2>
+      <p>Homes, farms, commercial premises, industrial facilities and mining operations — we adapt our delivery to your environment.</p>
+    </div>
+
+    <div class="sectors-grid">
+      <div class="sector s1">
+        <img class="sector-bg" src="" alt="">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11 12 3l9 8M5 10v10h14V10"/></svg></div>
+        <h3>Residential</h3>
+        <p>Homes, complexes & residential developments.</p>
+      </div>
+      <div class="sector s2">
+        <img class="sector-bg" src="" alt="">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18s2-6 9-6 9 6 9 6"/></svg></div>
+        <h3>Agriculture</h3>
+        <p>Farms, borehole installations and utility systems.</p>
+      </div>
+      <div class="sector s3">
+        <img class="sector-bg" src="" alt="">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V8l7-5 7 5v13"/></svg></div>
+        <h3>Commercial</h3>
+        <p>Shops, offices and commercial premises.</p>
+      </div>
+      <div class="sector s4">
+        <img class="sector-bg" src="" alt="">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21V10l5 3V8l5 3V8l5 3v10H3z"/></svg></div>
+        <h3>Industrial & Mining</h3>
+        <p>Factories, workshops & productivity-focused mining sites.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== GALLERY ===================== -->
+<section id="gallery" class="gallery">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">On The Job</span>
+      <h2>Snapshots from the field.</h2>
+      <p>A glimpse of recent installations, upgrades and service work across Zimbabwe.</p>
+    </div>
+
+    <div class="gal-grid">
+      <div class="gal g1" data-slideshow>
+        <img src="" alt="" class="active">
+        <img src="" alt="">
+        <img src="" alt="">
+      </div>
+      <div class="gal g2" data-slideshow>
+        <img src="" alt="" class="active">
+        <img src="" alt="">
+        <img src="" alt="">
+      </div>
+      <div class="gal g3" data-slideshow>
+        <img src="" alt="" class="active">
+        <img src="" alt="">
+        <img src="" alt="">
+      </div>
+      <div class="gal g4" data-slideshow>
+        <img src="" alt="" class="active">
+        <img src="" alt="">
+        <img src="" alt="">
+      </div>
+      <div class="gal g5" data-slideshow>
+        <img src="" alt="" class="active">
+        <img src="" alt="">
+        <img src="" alt="">
+      </div>
+      <div class="gal g6" data-slideshow>
+        <img src="" alt="" class="active">
+        <img src="" alt="">
+        <img src="" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===================== TESTIMONIALS ===================== -->
+<section class="quotes">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Client Voices</span>
+      <h2>Trusted by site managers, farmers & homeowners.</h2>
+    </div>
+
+    <div class="quotes-grid">
+      <div class="quote">
+        <p>HubSoft installed our solar backup and rewired the workshop — clean job, fair quote, and they answer the phone when something needs attention.</p>
+        <div class="who">
+          <div class="av">TM</div>
+          <div><b>Tendai M.</b><span>Workshop Owner • Harare</span></div>
+        </div>
+      </div>
+      <div class="quote">
+        <p>Our borehole pump and pressure setup has been faultless for two seasons. They understood the farm’s reality from day one.</p>
+        <div class="who">
+          <div class="av">RS</div>
+          <div><b>Rumbi S.</b><span>Farm Manager • Mashonaland</span></div>
+        </div>
+      </div>
+      <div class="quote">
+        <p>Fast response on a critical control panel fault that was costing us downtime. Diagnosed and repaired the same day.</p>
+        <div class="who">
+          <div class="av">JN</div>
+          <div><b>James N.</b><span>Plant Engineer • Industrial Site</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA + CONTACT ===================== -->
+<section id="contact" style="background:#fff">
+  <div class="container">
+    <div class="cta" style="margin-bottom:60px">
+      <div>
+        <span class="eyebrow" style="background:rgba(245,166,35,.18)">Ready when you are</span>
+        <h2 style="margin-top:14px">Book your site assessment today.</h2>
+        <p style="font-size:17px;max-width:520px">Ideal for quotations, site visits, installations and maintenance — share your site requirements and budget range, and we’ll propose a practical solution.</p>
+      </div>
+      <div class="actions">
+        <a class="btn btn-primary" href="tel:+263713472072">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2a1 1 0 011-.25c1.1.37 2.3.57 3.6.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.2.2 2.4.57 3.6a1 1 0 01-.25 1L6.6 10.8z"/></svg>
+          Call +263 713 472 072
+        </a>
+        <a class="btn btn-wa" href="https://wa.me/263713472072" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11.7 11.7 0 0012 0C5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.7 6L0 24l6.2-1.6A12 12 0 0012 24c6.6 0 12-5.4 12-12 0-3.2-1.3-6.2-3.5-8.5zM12 21.8a10 10 0 01-5.1-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.9 9.9 0 0112 2.2c5.4 0 9.8 4.4 9.8 9.8 0 5.4-4.4 9.8-9.8 9.8z"/></svg>
+          WhatsApp us instantly
+        </a>
+      </div>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <span class="eyebrow">Contact Details</span>
+        <h2 style="margin-top:14px">Talk to HubSoft.</h2>
+        <p>Reach out for quotations, site visits, installations or maintenance support.</p>
+
+        <div style="margin-top:18px">
+          <div class="contact-row">
+            <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2a1 1 0 011-.25c1.1.37 2.3.57 3.6.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.2.2 2.4.57 3.6a1 1 0 01-.25 1L6.6 10.8z"/></svg></div>
+            <div><b>Hotline</b><span>+263 713 472 072</span></div>
+          </div>
+          <div class="contact-row">
+            <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2a1 1 0 011-.25c1.1.37 2.3.57 3.6.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.2.2 2.4.57 3.6a1 1 0 01-.25 1L6.6 10.8z"/></svg></div>
+            <div><b>Sales</b><span>+263 789 109 604</span></div>
+          </div>
+         <div class="contact-row">
+  <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2a1 1 0 011-.25c1.1.37 2.3.57 3.6.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.2.2 2.4.57 3.6a1 1 0 01-.25 1L6.6 10.8z"/></svg></div>
+  <div><b>Alternative</b><span>+263 713 678 815</span></div>
+</div>
+
+<div class="contact-row">
+  <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
+  <!-- Removed target="_blank" to stop the blank web page from opening -->
+  <div><b>Email</b><span><a href="/cdn-cgi/l/email-protection#2d45584f5e424b590359484e451d1c6d4a404c4441034e4240"><span class="__cf_email__" data-cfemail="3b534e5948545d4f154f5e58530b0a7b5c565a525715585456">[email&#160;protected]</span></a></span></div>
+</div>
+
+<div class="contact-row">
+  <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
+  <div><b>Sales Email</b><span><a href="/cdn-cgi/l/email-protection#224a5740514d445647414a51434e4751624d57564e4d4d490c414d4f"><span class="__cf_email__" data-cfemail="e28a9780918d849687818a91838e8791a28d97968e8d8d89cc818d8f">[email&#160;protected]</span></a></span></div>
+</div>
+
+
+        </div>
+      </div>
+
+<div class="contact-card">
+  <span class="eyebrow">Request a Quote</span>
+  <h2 style="margin-top:14px">Tell us about your site.</h2>
+  
+  <!-- Minimal Toggle Tabs added right at the top -->
+  <div style="display: flex; gap: 8px; margin-bottom: 24px; background: #f4f4f5; padding: 4px; border-radius: 8px;">
+    <button type="button" id="tabWa" onclick="switchMethod('whatsapp')" style="flex: 1; padding: 8px; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; background: #25D366; color: white; transition: 0.2s;">
+      Send via WhatsApp
+    </button>
+    <button type="button" id="tabEmail" onclick="switchMethod('email')" style="flex: 1; padding: 8px; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; background: transparent; color: #71717a; transition: 0.2s;">
+      Send via Email
+    </button>
+  </div>
+
+  <!-- Your exact unchanged form layout -->
+  <form id="hubsoftForm">
+    <div class="field-row">
+      <div class="field">
+        <label>Full name</label>
+        <input required type="text" id="fullName" placeholder="Your name" />
+      </div>
+      <div class="field">
+        <label>Phone</label>
+        <input required type="tel" id="phone" placeholder="+263…" />
+      </div>
+    </div>
+    <div class="field">
+      <label>Email</label>
+      <input type="email" id="email" placeholder="you@example.com" />
+    </div>
+    <div class="field-row">
+      <div class="field">
+        <label>Service needed</label>
+        <select id="service">
+          <option>Electrical</option>
+          <option>Solar & Backup Power</option>
+          <option>Borehole Systems</option>
+          <option>Plumbing</option>
+          <option>Multi-service</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Sector</label>
+        <select id="sector">
+          <option>Residential</option>
+          <option>Commercial</option>
+          <option>Industrial</option>
+          <option>Mining</option>
+          <option>Farm</option>
+        </select>
+      </div>
+    </div>
+    <div class="field">
+      <label>Project details</label>
+      <textarea id="details" rows="4" placeholder="Briefly describe your site, scope and timing…"></textarea>
+    </div>
+    
+    <!-- Your button modified slightly to change text dynamically -->
+    <button class="btn btn-dark" type="submit" id="submitBtn" style="width: 100%; justify-content: center; background: #25D366; border-color: #25D366;">
+      <span id="btnText">Submit via WhatsApp</span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 8px;"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+    </button>
+  </form>
+</div>
+
+<!-- Form Submission JavaScript Link -->
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  // Track toggle choice (Default to whatsapp)
+  let activeMethod = 'whatsapp';
+
+  function switchMethod(method) {
+    activeMethod = method;
+    const tabWa = document.getElementById('tabWa');
+    const tabEmail = document.getElementById('tabEmail');
+    const submitBtn = document.getElementById('submitBtn');
+    const btnText = document.getElementById('btnText');
+
+    if (method === 'whatsapp') {
+      tabWa.style.background = '#25D366';
+      tabWa.style.color = 'white';
+      tabEmail.style.background = 'transparent';
+      tabEmail.style.color = '#71717a';
+      submitBtn.style.background = '#25D366';
+      submitBtn.style.borderColor = '#25D366';
+      btnText.innerText = 'Submit via WhatsApp';
+    } else {
+      tabEmail.style.background = '#ea4335'; // Gmail red theme color
+      tabEmail.style.color = 'white';
+      tabWa.style.background = 'transparent';
+      tabWa.style.color = '#71717a';
+      submitBtn.style.background = '#ea4335';
+      submitBtn.style.borderColor = '#ea4335';
+      btnText.innerText = 'Submit via Email';
+    }
+  }
+
+  document.getElementById('hubsoftForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const whatsappNumber = "263713472072";
+
+    // Your exact data capturing logic
+    const name = document.getElementById('fullName').value;
+    const phone = document.getElementById('phone').value;
+    const email = document.getElementById('email').value || "Not provided";
+    const service = document.getElementById('service').value;
+    const sector = document.getElementById('sector').value;
+    const details = document.getElementById('details').value || "None provided";
+
+    // Your exact text layout mapping
+    const textToSend = `*New HubSoft Quote Request*\n\n` +
+                        `*Name:* ${name}\n` +
+                        `*Phone:* ${phone}\n` +
+                        `*Email:* ${email}\n` +
+                        `*Service:* ${service}\n` +
+                        `*Sector:* ${sector}\n` +
+                        `*Details:* ${details}`;
+
+    const encodedText = encodeURIComponent(textToSend);
+
+    // Dynamic routing execution based on active selection
+    if (activeMethod === 'whatsapp') {
+      window.open(`https://wa.me/263713472072?text=${encodedText}`, '_blank');
+    } else {
+      const emailTarget = "hubsoft.tech01@gmail.com";
+      const subject = "New HubSoft Quote Request";
+      
+      // Plain text clean up (drops asterisks for cleaner email reads)
+      const emailBody = textToSend.replace(/\*/g, '');
+      const encodedEmailBody = encodeURIComponent(emailBody);
+      const encodedSubject = encodeURIComponent(subject);
+
+      // System detection: Desktop users load browser Gmail, mobile devices use default apps
+      const isDesktop = !/Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+      if (isDesktop) {
+        window.open(`https://google.com{emailTarget}&su=${encodedSubject}&body=${encodedEmailBody}`, '_blank');
+      } else {
+        window.open(`mailto:${emailTarget}?subject=${encodedSubject}&body=${encodedEmailBody}`, '_self');
+      }
+    }
+  }); // Fixed the original missing closing syntax wrapper here
+</script>
+
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="logo" style="color:#fff">
+          <div class="logo-mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg></div>
+          <div class="logo-name">
+            <b style="color:#fff">HubSoft</b>
+            <span style="color:#a5b6d6">Engineering Solutions</span>
+          </div>
+        </div>
+        <p style="color:#a5b6d6;margin-top:18px;max-width:340px;font-size:14px">
+          Electrical • Solar • Borehole • Plumbing. Dependable site services for homes, farms, businesses, industrial facilities and mining operations across Zimbabwe.
+        </p>
+        <div class="socials">
+          <a href="https://wa.me/263713472072" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11.7 11.7 0 0012 0C5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.7 6L0 24l6.2-1.6A12 12 0 0012 24c6.6 0 12-5.4 12-12 0-3.2-1.3-6.2-3.5-8.5z"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 10-11.6 9.9v-7H8v-3h2.4V9.4c0-2.4 1.4-3.7 3.6-3.7 1 0 2.1.2 2.1.2v2.3h-1.2c-1.2 0-1.5.7-1.5 1.5V12h2.6l-.4 3h-2.2v7A10 10 0 0022 12z"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 3H4a1 1 0 00-1 1v16a1 1 0 001 1h16a1 1 0 001-1V4a1 1 0 00-1-1zM8.3 18.3H5.7V9.7h2.6v8.6zM7 8.6a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm11.3 9.7h-2.6v-4.2c0-1 0-2.3-1.4-2.3s-1.6 1.1-1.6 2.2v4.3H10V9.7h2.5v1.2a2.8 2.8 0 012.5-1.4c2.7 0 3.2 1.8 3.2 4.1v4.7z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <a href="#services">Electrical</a>
+        <a href="#services">Solar & Backup</a>
+        <a href="#services">Borehole</a>
+        <a href="#services">Plumbing</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="#about">About HubSoft</a>
+        <a href="#process">How we work</a>
+        <a href="#sectors">Sectors</a>
+        <a href="#gallery">Projects</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="tel:+263713472072">+263 713 472 072</a>
+        <a href="tel:+263789109604">+263 789 109 604</a>
+        <a href="/cdn-cgi/l/email-protection#2e465b4c5d5e415a005a4b4d461e1f6e49434f4742004d4143">send us an email</a>
+        <a href="https://wa.me/263713472072">Send us Whatsapp</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 HubSoft Engineering Solutions. All rights reserved.</span>
+      <span>Residential • Commercial • Industrial • Mining</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Gallery slideshow (3 images per tile, auto-fade) -->
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  (function () {
+    var INTERVAL = 3500; // ms between slides
+    var STAGGER  = 500;  // ms offset between tiles so they don't all flip at once
+    document.querySelectorAll('[data-slideshow]').forEach(function (tile, tileIdx) {
+      var imgs = tile.querySelectorAll('img');
+      if (imgs.length < 2) return;
+      var i = 0;
+      setTimeout(function () {
+        setInterval(function () {
+          imgs[i].classList.remove('active');
+          i = (i + 1) % imgs.length;
+          imgs[i].classList.add('active');
+        }, INTERVAL);
+      }, tileIdx * STAGGER);
+    });
+  })();
+</script>
+
+<!-- Floating WhatsApp -->
+<a class="float-wa" href="https://wa.me/263713472072" target="_blank" aria-label="Chat on WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11.7 11.7 0 0012 0C5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.7 6L0 24l6.2-1.6A12 12 0 0012 24c6.6 0 12-5.4 12-12 0-3.2-1.3-6.2-3.5-8.5zM12 21.8a10 10 0 01-5.1-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.9 9.9 0 0112 2.2c5.4 0 9.8 4.4 9.8 9.8 0 5.4-4.4 9.8-9.8 9.8zm5.4-7.3c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.2l-1 1.2c-.2.2-.4.3-.7.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.4.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.1c-.2-.5-.5-.4-.6-.4h-.6c-.2 0-.5.1-.8.4-.3.3-1.1 1.1-1.1 2.6 0 1.5 1.1 3 1.3 3.2.2.2 2.2 3.3 5.3 4.6.7.3 1.3.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/></svg>
+</a>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9ffccf615df51689',t:'MTc3OTQ2MzI4MA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a05dd57eba184ed8',t:'MTc4MDQ4MDY1MA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
