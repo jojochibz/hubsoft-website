@@ -8,6 +8,100 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
 <style>
+  {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://hubsoft-website.vercel.app/#organization",
+      "name": "HubSoft Engineering Solutions",
+      "url": "https://hubsoft-website.vercel.app/",
+      "logo": "https://hubsoft-website.vercel.app/logo.png",
+      "image": "https://hubsoft-website.vercel.app/images/industrial-control-panel-wiring.jpg",
+      "description": "Multi-trade engineering services in Zimbabwe. Certified electrical, solar power installations, borehole pump commissioning, and professional plumbing.",
+      "telephone": "+263713472072",
+      "email": "hubsoft.tech01@gmail.com",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Harare",
+        "addressCountry": "ZW"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-17.8252",
+        "longitude": "31.0335"
+      },
+      "areaServed": [
+        {
+          "@type": "AdministrativeArea",
+          "name": "Harare"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Mashonaland"
+        },
+        {
+          "@type": "Country",
+          "name": "Zimbabwe"
+        }
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "sameAs": [
+        "https://wa.me/263713472072"
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://hubsoft-website.vercel.app/#electrical",
+      "name": "Electrical Services",
+      "provider": {
+        "@id": "https://hubsoft-website.vercel.app/#organization"
+      },
+      "description": "Domestic, commercial & industrial electrical wiring, 3-phase installations, control panels, switchboards, and fault finding across Zimbabwe."
+    },
+    {
+      "@type": "Service",
+      "@id": "https://hubsoft-website.vercel.app/#solar",
+      "name": "Solar & Backup Power Solutions",
+      "provider": {
+        "@id": "https://hubsoft-website.vercel.app/#organization"
+      },
+      "description": "Solar system design, hybrid & off-grid backup systems, inverter, battery setup, and fault diagnosis."
+    },
+    {
+      "@type": "Service",
+      "@id": "https://hubsoft-website.vercel.app/#borehole",
+      "name": "Borehole Systems & Water Delivery",
+      "provider": {
+        "@id": "https://hubsoft-website.vercel.app/#organization"
+      },
+      "description": "Borehole pump installation, water reticulation, pressure systems, and pump control setups for farms and homes."
+    },
+    {
+      "@type": "Service",
+      "@id": "https://hubsoft-website.vercel.app/#plumbing",
+      "name": "Plumbing Services",
+      "provider": {
+        "@id": "https://hubsoft-website.vercel.app/#organization"
+      },
+      "description": "Professional plumbing installations, leak detection, piping, and integrated water systems."
+    }
+  ]
+}
   :root{
     --navy:#0b2545;
     --navy-2:#13315c;
